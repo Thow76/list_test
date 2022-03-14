@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">list_test</string>
     <string name="db_drop" />
+    <string name="enter_food_here">Enter food here</string>
+    <string name="enter_expiry_here">Enter expiry here</string>
 </resources>
