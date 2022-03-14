@@ -16,7 +16,7 @@ public class ListPage extends AppCompatActivity {
 
    //public ListPage(ArrayList<String> foodArrayList) {
     // this.foodArrayList = foodArrayList;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
