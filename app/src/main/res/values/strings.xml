@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">list_test</string>
+    <string name="db_drop" />
+</resources>
