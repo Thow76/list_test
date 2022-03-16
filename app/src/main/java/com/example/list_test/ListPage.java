@@ -18,7 +18,7 @@ public class ListPage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
-    private ArrayList<String> foodArrayList;
+    private ArrayList<Food> foodArrayList;
     private ArrayAdapter<String> arrayAdapter;
 
    //public ListPage(ArrayList<String> foodArrayList) {
@@ -32,15 +32,23 @@ public class ListPage extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
         foodArrayList = new ArrayList<>();
+
+
         DatabaseHandler db = new DatabaseHandler(ListPage.this);
+        List<Food> foodList = db.getAllFoodItems();
+
+        for (Food food : foodList) {
+            foodArrayList.add(food);
+        }
+        //setup adapter
+        recyclerViewAdapter = new RecyclerViewAdapter(ListPage.this, foodArrayList);
+
+        recyclerView.setAdapter(recyclerViewAdapter);
 
 
-        //List<Food> foodList = db.getAllFoodItems();
-        //for(Food food: foodList) {
 
-          //  foodArrayList.add(food.getFood_item());
+
+
 }
 }
