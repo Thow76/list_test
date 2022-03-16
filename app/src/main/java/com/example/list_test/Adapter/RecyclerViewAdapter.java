@@ -33,8 +33,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+            Food food = foodList.get(position);// each contact object inside of our list
 
+            viewHolder.foodName.setText(food.getFood_item());
+            viewHolder.expiryDate.setText(food.getExpiry_date());
     }
 
     @Override
