@@ -2,61 +2,94 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:contentPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" >
+        app:layout_constraintVertical_bias="0.445">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background= "@color/white"
+            android:padding="14dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/foodTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="304dp"
+                android:padding="8dp"
+                android:text="Food"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:id="@+id/expiryTag"
+                android:layout_width="96dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="301dp"
+                android:padding="8dp"
+                android:text="Expiry"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="89dp"
+                android:layout_height="41dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="177dp"
+                android:padding="8dp"
+                android:text="@string/enter_food_here"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/expiry"
+                android:layout_width="119dp"
+                android:layout_height="41dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="161dp"
+                android:padding="8dp"
+                android:text="@string/enter_expiry_here"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:padding="14dp"
-        android:layout_height="195dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-3dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/food"
-            android:padding="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/enter_food_here"
-            android:textSize="15sp">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/expiry"
-            android:padding="8dp"
-            android:layout_below="@+id/food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/enter_expiry_here"
-            android:textSize="15sp">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_launcher_background">
-
-        </ImageView>
-
-    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
