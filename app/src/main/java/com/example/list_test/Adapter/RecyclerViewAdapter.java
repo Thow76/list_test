@@ -3,9 +3,11 @@ package com.example.list_test.Adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.list_test.R;
@@ -50,21 +52,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public TextView foodName;
         public TextView expiryDate;
+        public ImageView tickBox;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemView.setOnClickListener(this);
+
             foodName = itemView.findViewById(R.id.food);
             expiryDate = itemView.findViewById(R.id.expiry);
+            tickBox = itemView.findViewById(R.id.tickBox);
+            itemView.setOnClickListener(this);
+            tickBox.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
 
-
         int position = getAdapterPosition();
         Food food = foodList.get(position);
+        Log.d("Clicked", "onClick " + food.getFood_item());
+        Log.d("Clicked", "onClick " + food.getExpiry_date());
         }
+
+
     }
 }
