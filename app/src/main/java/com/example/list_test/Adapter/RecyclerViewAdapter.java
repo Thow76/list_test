@@ -46,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return foodList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView foodName;
         public TextView expiryDate ;
@@ -56,6 +56,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             foodName = itemView.findViewById(R.id.food);
             expiryDate = itemView.findViewById(R.id.expiry);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }
