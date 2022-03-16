@@ -49,11 +49,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView foodName;
-        public TextView expiryDate ;
+        public TextView expiryDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(this);
             foodName = itemView.findViewById(R.id.food);
             expiryDate = itemView.findViewById(R.id.expiry);
         }
@@ -61,6 +62,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         @Override
         public void onClick(View v) {
 
+
+        int position = getAdapterPosition();
+        Food food = foodList.get(position);
         }
     }
 }
