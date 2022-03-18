@@ -39,8 +39,10 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginEnd="304dp"
                 android:padding="8dp"
-                android:text="Food"
-                android:textSize="15sp"></TextView>
+                android:text="@string/foodTag"
+                android:textSize="15sp">
+
+            </TextView>
 
             <TextView
                 android:id="@+id/expiryTag"
@@ -53,8 +55,10 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="301dp"
                 android:padding="8dp"
-                android:text="Expiry"
-                android:textSize="15sp"></TextView>
+                android:text="@string/expiryTag"
+                android:textSize="15sp">
+
+            </TextView>
 
             <TextView
                 android:id="@+id/food"

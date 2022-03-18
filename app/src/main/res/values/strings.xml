@@ -3,4 +3,6 @@
     <string name="db_drop" />
     <string name="enter_food_here">Enter food here</string>
     <string name="enter_expiry_here">Enter expiry here</string>
+    <string name="foodTag">Food</string>
+    <string name="expiryTag">Expiry</string>
 </resources>

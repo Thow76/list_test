@@ -53,6 +53,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView foodName;
         public TextView expiryDate;
         public ImageView tickBox;
+        public TextView foodTag;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,8 +62,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             foodName = itemView.findViewById(R.id.food);
             expiryDate = itemView.findViewById(R.id.expiry);
             tickBox = itemView.findViewById(R.id.tickBox);
-            itemView.setOnClickListener(this);
+            foodTag = itemView.findViewById(R.id.foodTag);
+            //itemView.setOnClickListener(this);
             tickBox.setOnClickListener(this);
+            foodName.setOnClickListener(this);
+            foodTag.setOnClickListener(this);
+
         }
 
         @Override
@@ -70,8 +75,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         int position = getAdapterPosition();
         Food food = foodList.get(position);
-        Log.d("Clicked", "onClick " + food.getFood_item());
-        Log.d("Clicked", "onClick " + food.getExpiry_date());
+
+        switch (v.getId()) {
+            case R.id.tickBox:
+                Log.d("TickBoxClicked", "onClick " + food.getExpiry_date());
+                break;
+            case R.id.food:
+                Log.d("Clicked", "onClick " + food.getFood_item());
+                break;
+            case R.id.foodTag:
+                Log.d("TagClicked", "onClick " + food.getFood_item());
+            default:
+        }
+
         }
 
 
