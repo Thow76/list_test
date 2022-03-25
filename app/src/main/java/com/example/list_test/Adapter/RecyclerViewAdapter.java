@@ -1,6 +1,7 @@
 package com.example.list_test.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.list_test.DetailsActivity;
 import com.example.list_test.R;
 import com.example.list_test.model.Food;
 
@@ -76,20 +78,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         int position = getAdapterPosition();
         Food food = foodList.get(position);
 
-        switch (v.getId()) {
-            case R.id.tickBox:
-                Log.d("TickBoxClicked", "onClick " + food.getExpiry_date());
-                break;
-            case R.id.food:
-                Log.d("Clicked", "onClick " + food.getFood_item());
-                break;
-            case R.id.foodTag:
-                Log.d("TagClicked", "onClick " + food.getFood_item());
-            default:
+            Intent intent = new Intent(context, DetailsActivity.class);
+            intent.putExtra("name", food.getFood_item());
+            intent.putExtra("expiry", food.getExpiry_date());
+
+            context.startActivity(intent);
         }
-
-        }
-
-
     }
 }
+
+

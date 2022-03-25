@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.List_test">
         <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListPage"
             android:exported="true">
             <intent-filter>
